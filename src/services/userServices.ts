@@ -6,7 +6,7 @@ interface RegisterParams {
     userName: String,
     email: string,
     password: string
-}
+};
 
 export const register = async ({userName, email, password}: RegisterParams) => {
     const findUser = await userModel.findOne({email})
@@ -20,12 +20,12 @@ export const register = async ({userName, email, password}: RegisterParams) => {
     await newUser.save()
 
     return {data: generateJWT({userName, email}), statusCode: 200};
-}
+};
 
 interface LoginParams {
     email: string,
     password: string
-}
+};
 
 export const login = async ({email, password}: LoginParams) => {
     const findUser = await userModel.findOne({email})
@@ -40,8 +40,8 @@ export const login = async ({email, password}: LoginParams) => {
     }
 
     return {data: 'Incorrect email and password!', statusCode: 400}
-}
+};
 
 const generateJWT = (data: any) => {
     return jwt.sign(data, 'tCmxaEJzT/xgnSxKk3YaweRjq+5eG1HPug4zsbKKIJIcc/1QKP5UeGq2B8dM+T6v');
-}
+};

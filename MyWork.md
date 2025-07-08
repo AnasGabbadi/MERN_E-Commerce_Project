@@ -15,3 +15,10 @@ npm i --save-dev @types/jsonwebtoken
 # Git
 
 git init
+
+user name: AnasGabbadi
+private key: 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
+schema: AnasGabbadi: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@
+
+git branch -M main
+git push -u origin main
