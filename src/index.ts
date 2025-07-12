@@ -1,9 +1,12 @@
-import express from "express";
-import mongoose from "mongoose";
-import userRoute from "./routes/userRoute";
-import { seedInitialProducts } from "./services/productServices";
-import productRoute from "./routes/productRoute";
-import cartRoute from "./routes/cartRoute";
+import dotenv from "dotenv"; // Load environment variables from .env file
+import express from "express"; // Import express for creating the server
+import mongoose from "mongoose"; // Import mongoose for MongoDB interactions
+import userRoute from "./routes/userRoute"; // Import user routes for handling user-related requests
+import { seedInitialProducts } from "./services/productServices"; // Import function to seed initial products
+import productRoute from "./routes/productRoute"; // Import product routes for handling product-related requests
+import cartRoute from "./routes/cartRoute"; // Import cart routes for handling cart-related requests
+
+dotenv.config(); // Load environment variables from .env file
 
 const app = express()
 const port = 3001;
@@ -11,7 +14,7 @@ const port = 3001;
 app.use(express.json())
 
 mongoose
-		.connect('mongodb://127.0.0.1:27017/gamatel')
+		.connect(process.env.DATABASE_URL || "")
 		.then(() => console.log('Gamatel data base Connected!'))
 		.catch((err) => console.log('Gamatel data base failed to connect!', err));
 

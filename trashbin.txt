@@ -1,3 +1,9 @@
+mongodb://127.0.0.1:27017/gamatel
+ 
+secretKey
+ 
+'
+ 
 const
  
 productModel
