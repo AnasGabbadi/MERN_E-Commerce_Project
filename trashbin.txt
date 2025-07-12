@@ -1,3 +1,34 @@
+deleteItemInCart
+ 
+productId
+ 
+otherCartItems.reduce((sum, product) => {   
+        sum += product.quantity * product.unitPrice;
+        return sum;
+    }, 0);
+ 
+cart.items
+ 
+productId
+ 
+ICart
+ 
+otherCartItems
+ 
+    return items.reduce((total, item) => {
+        return total + (item.unitPrice * item.quantity);
+    }, 0);
+ 
+export
+ 
+existsInCart.quantity * existsInCart.unitPrice
+ 
+userId, productId: productId.productId, quantity: 0
+ 
+updateItemInCart
+ 
+productId
+ 
 Item already exists in cart!
  
 condition
