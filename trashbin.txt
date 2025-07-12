@@ -1,3 +1,27 @@
+Item already exists in cart!
+ 
+condition
+ 
+condition
+ 
+types
+ 
+types
+ 
+condition
+ 
+exports
+ 
+condition
+ 
+condition
+ 
+</ICart>
+ 
+Cart
+ 
+CartStatusEnum
+ 
 condition
  
 findUser
