@@ -5,6 +5,7 @@ import userRoute from "./routes/userRoute"; // Import user routes for handling u
 import { seedInitialProducts } from "./services/productServices"; // Import function to seed initial products
 import productRoute from "./routes/productRoute"; // Import product routes for handling product-related requests
 import cartRoute from "./routes/cartRoute"; // Import cart routes for handling cart-related requests
+import cors from "cors"; // Import CORS middleware for handling cross-origin requests
 
 dotenv.config(); // Load environment variables from .env file
 
@@ -12,6 +13,7 @@ const app = express()
 const port = 3001;
 
 app.use(express.json())
+app.use(cors()); // Use CORS middleware to allow cross-origin requests
 
 mongoose
 		.connect(process.env.DATABASE_URL || "")

@@ -1,3 +1,28 @@
+BASE_URL
+ 
+BASE_URL
+ 
+http://localhost:3001
+ 
+id={p._id} title={p.title} image={p.image} price={p.price}
+ 
+ey={p.id}
+ 
+Lizards are a widespread group of squamate reptiles, with over 6,000
+            species, ranging across all continents except Antarctica
+ 
+item
+ 
+2
+ 
+item
+ 
+ md={4}
+ 
+item
+ 
+Card
+ 
 Vite + React + TS
  
 LOGO
